@@ -1,0 +1,1 @@
+navcoin-white-paper
