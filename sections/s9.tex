@@ -1,0 +1,74 @@
+\section{Community Fund}
+\label{S:9}
+
+The network runs a fully decentralised community fund to compensate contributors for their efforts. The 
+fund is fully decentralised meaning any network participant may submit a proposal for a project and all 
+projects are voted on democratically by the network, with all network participants (having staking weight) 
+eligible to vote. Since NAVCoin does not have master nodes, there are no master nodes with centralised 
+voting power or control over community funds. The community fund is implemented on a protocol level and 
+there are no nodes or addresses holding the funds.
+
+Thus, the nature and scope of projects funded by the community fund is decided by and voted on by all community 
+members. This decentralises conception and execution of projects and ideally, this incentivises the creation 
+of projects which are in the interests of the network. 
+
+\subsection{Funds Available}
+
+Currently 0.5 NAV per block is generated into the community fund which results in approximately 525,600 NAV
+\footnote{Assuming 2 blocks per minute x 60 minutes per hour x 24 hours per day x 365 days per year} 
+generated per annum, which is available as payouts for community projects. In addition, network participants 
+may donate funds to the community fund.
+
+\subsection{Dual-vote Consensus and Procedure}
+
+The fund is operated under a dual voting mechanism, meaning the network will vote on each project in two
+stages:
+\begin{itemize}
+\item Proposal stage: Firstly, the network will vote on their acceptance of the project nature and scope.
+\item Payment request stage: Secondly, the network will vote on whether to release funds to the benefactor 
+depending on whether progress on the project has been completed satisfactorily.
+\end{itemize}
+
+Thus for a network participant to be paid out from the community fund, they must first submit a proposal 
+outlining the nature, scope, timeframe and total cost of their project.  If their proposal is accepted, 
+they would be expected to carry out work on their project and then submit a payment request for the second 
+stage vote and only when the second stage is voted on successfully would they be paid. One proposal could 
+have multiple payment requests summing up to no more than the total amount outlined in the proposal.
+
+At each stage, network participants vote on proposals and payment requests by selecting their vote in their 
+staking wallet, and if they stake a block, their vote is recorded on the blockchain. Thus the maximum number 
+of votes recorded for each voting period is equal to the number of blocks and every stake corresponds to one vote. 
+
+Voters can choose to cast a yes vote, no vote or abstain for each proposal and payment request. If the number 
+of yes votes meets the required acceptance threshold and voting quorum, the proposal or payment request is 
+accepted at the end of that voting period. If the number of no votes meets the required rejection threshold 
+and voting quorum, the proposal or payment request is rejected at the end of that voting period and can no 
+longer be voted on. Proposals and payment requests which do not meet these thresholds remain pending and 
+can be voted on in the next period, up to a maximum of 6 and 8 periods for proposals and payment requests 
+respectively, after which they will expire.
+
+\subsection{Technical Specifications and Voting Thresholds}
+
+The community fund uses new opcodes to handle creation of proposals, payment requests, voting and donations. Technical 
+details of the community fund implementation can be found 
+\href{https://github.com/aguycalled/cfundpaper/blob/master/cfund.pdf}{here}. The current specifications and 
+voting thresholds of the community fund are as follows:
+\begin{table}[h]
+\centering
+\begin{tabular}{l l}
+\hline
+Community fund contribution & 0.5 NAV per block \\
+Voting period length & 20,160 blocks\\
+Proposal acceptance threshold & 70\% of total votes \\
+Proposal rejection threshold & 70\% of total votes \\
+Proposal voting quorum & 50\% \\
+Maximum voting periods for deliberation on proposals & 6 voting periods \\
+Payment request acceptance threshold & 70\% of total votes \\
+Payment request rejection threshold & 70\% of total votes \\
+Payment request voting quorum & 50\% \\
+Maximum voting periods for deliberation on payment requests & 8 voting periods \\
+Proposal submission fee & 50 NAV (donated to the community fund) \\
+\hline
+\end{tabular}
+\caption{Technical specifications of the Community Fund}
+\end{table}

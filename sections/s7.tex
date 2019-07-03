@@ -1,0 +1,29 @@
+\section{Incentive / Inflation Schema}
+\label{S:7}
+\subsection{Incentive Mechanism}
+
+Each block contains a special transaction known as the coinstake that generates new NAV for the 
+creator of the block. At the time of writing, the reward amount generated is fixed at 2 NAV per block. 
+
+Similar to Bitcoin, an incentive can also be provided via transaction fees. If the output value 
+of a transaction is less than its input value, the difference is a transaction fee that is added 
+to the incentive value of the block containing the transaction. 
+
+Since nodes can only receive these rewards if they are online and staking, this incentivises nodes to 
+(i) create blocks for recording transactions and (ii) stay online to support the network. The latter 
+is particularly important for network security because the more participants who try to receive 
+rewards by having coins online and staking, the more participants there are to determine consensus on 
+the state of the blockchain. More participants online makes the network more resistant to bad actors trying 
+to impose their own version of the state of the blockchain through 51\% attacks on the network.
+
+\subsection{Inflation}
+
+The fixed reward amount, combined with the community fund contribution of 0.5 NAV per block, results in 
+a net increase in supply of 2.5 NAV for every block created. Assuming there are 1,051,200 blocks created 
+per annum (calculated by 2 blocks per minute x 60 x 24 x 365), this results in an increase of 2,628,000 
+NAV per annum in money supply available to the network. At the time of writing, the total money supply of 
+NAV available to the network is approximately 63,995,000 NAV, which results in an inflation rate of 
+approximately 4.11\%. However, given that the increase in money supply per annum is fixed and the total 
+supply is increasing, the percentage inflation rate will fall over time.
+
+
